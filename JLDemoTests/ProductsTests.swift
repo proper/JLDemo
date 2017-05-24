@@ -22,8 +22,13 @@ class ProductsTests: XCTestCase {
     }
     
     func testNewProduct() {
-        let product = Product()
+        let product =  Product(productId: "testId", price: "1120", title:"A Dishwasher", image:"//sample.com/image.jpg")
+        
         XCTAssertNotNil(product)
+        XCTAssertEqual(product.productId, "testId")
+        XCTAssertEqual(product.price, "1120")
+        XCTAssertEqual(product.title, "A Dishwasher")
+        XCTAssertEqual(product.image, "//sample.com/image.jpg")
     }
     
 }
