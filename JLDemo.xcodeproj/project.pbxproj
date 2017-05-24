@@ -12,8 +12,9 @@
 		F002D56A1ED58C600076946F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F002D5681ED58C600076946F /* Main.storyboard */; };
 		F002D56C1ED58C600076946F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F002D56B1ED58C600076946F /* Assets.xcassets */; };
 		F002D56F1ED58C600076946F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F002D56D1ED58C600076946F /* LaunchScreen.storyboard */; };
-		F002D57A1ED58C610076946F /* JLDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5791ED58C610076946F /* JLDemoTests.swift */; };
 		F002D5851ED58C610076946F /* JLDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5841ED58C610076946F /* JLDemoUITests.swift */; };
+		F002D5931ED5D5530076946F /* ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5921ED5D5530076946F /* ProductsTests.swift */; };
+		F002D5961ED5D62A0076946F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5951ED5D62A0076946F /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,12 @@
 		F002D56E1ED58C600076946F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F002D5701ED58C600076946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F002D5751ED58C610076946F /* JLDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F002D5791ED58C610076946F /* JLDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDemoTests.swift; sourceTree = "<group>"; };
 		F002D57B1ED58C610076946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F002D5801ED58C610076946F /* JLDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F002D5841ED58C610076946F /* JLDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDemoUITests.swift; sourceTree = "<group>"; };
 		F002D5861ED58C610076946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F002D5921ED5D5530076946F /* ProductsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTests.swift; sourceTree = "<group>"; };
+		F002D5951ED5D62A0076946F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F002D5631ED58C600076946F /* JLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F002D5941ED5D5C20076946F /* Model */,
 				F002D5641ED58C600076946F /* AppDelegate.swift */,
 				F002D5661ED58C600076946F /* ProductsViewController.swift */,
 				F002D5681ED58C600076946F /* Main.storyboard */,
@@ -110,8 +113,8 @@
 		F002D5781ED58C610076946F /* JLDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				F002D5791ED58C610076946F /* JLDemoTests.swift */,
 				F002D57B1ED58C610076946F /* Info.plist */,
+				F002D5921ED5D5530076946F /* ProductsTests.swift */,
 			);
 			path = JLDemoTests;
 			sourceTree = "<group>";
@@ -123,6 +126,14 @@
 				F002D5861ED58C610076946F /* Info.plist */,
 			);
 			path = JLDemoUITests;
+			sourceTree = "<group>";
+		};
+		F002D5941ED5D5C20076946F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F002D5951ED5D62A0076946F /* Product.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 					F002D5741ED58C610076946F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MS9BQ3Y8UY;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F002D5601ED58C600076946F;
 					};
@@ -264,6 +276,7 @@
 			files = (
 				F002D5671ED58C600076946F /* ProductsViewController.swift in Sources */,
 				F002D5651ED58C600076946F /* AppDelegate.swift in Sources */,
+				F002D5961ED5D62A0076946F /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F002D57A1ED58C610076946F /* JLDemoTests.swift in Sources */,
+				F002D5931ED5D5530076946F /* ProductsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +459,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MS9BQ3Y8UY;
 				INFOPLIST_FILE = JLDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.lilinyu.demo.JLDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLDemo.app/JLDemo";
 			};
@@ -461,6 +476,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MS9BQ3Y8UY;
 				INFOPLIST_FILE = JLDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -518,6 +534,7 @@
 				F002D58B1ED58C610076946F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F002D58C1ED58C610076946F /* Build configuration list for PBXNativeTarget "JLDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +543,7 @@
 				F002D58E1ED58C610076946F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F002D58F1ED58C610076946F /* Build configuration list for PBXNativeTarget "JLDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +552,7 @@
 				F002D5911ED58C610076946F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
