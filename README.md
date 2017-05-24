@@ -1,6 +1,6 @@
 # JLDemo
 
-A demo project based on Swift 3 & Xcode 8and Xcode 8, for iPad only.
+A demo project based on Swift 3 & Xcode 8, for iPad only.
 
 Git-flow workflow was used to develop the app.
 
@@ -12,8 +12,8 @@ Git-flow workflow was used to develop the app.
 
 ### The plan for the demo
 
-- A model will be creaated first. 
-- I will add the networking download logic after.
+- A model will be created first. 
+- I will add the network downloading logic after.
 - I will use UICollectionView to display the grid. I will possibly use a 3rd party image downloader, because it will be easier and not comprise the purpose of the demo.
 
 ### TDD approach applied
