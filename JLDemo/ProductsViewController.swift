@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProductsViewController.swift
 //  JLDemo
 //
 //  Created by Li Linyu on 24/05/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProductsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
