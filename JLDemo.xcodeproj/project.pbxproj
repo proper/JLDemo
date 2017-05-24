@@ -24,6 +24,9 @@
 		F04F5A551ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F5A541ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json */; };
 		F04F5A5A1ED63FE5005F23F3 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F5A591ED63FE5005F23F3 /* APIEndpoint.swift */; };
 		F04F5A5C1ED640FE005F23F3 /* APIEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F5A5B1ED640FE005F23F3 /* APIEndpointTests.swift */; };
+		F04F5A5E1ED64578005F23F3 /* ProductsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F5A5D1ED64578005F23F3 /* ProductsFetcher.swift */; };
+		F04F5A601ED6458C005F23F3 /* ProductsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F5A5F1ED6458C005F23F3 /* ProductsFetcherTests.swift */; };
+		F04F5A621ED64C3E005F23F3 /* Stub_ProductsList.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F5A611ED64C3E005F23F3 /* Stub_ProductsList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		F04F5A571ED5F289005F23F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F04F5A591ED63FE5005F23F3 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		F04F5A5B1ED640FE005F23F3 /* APIEndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpointTests.swift; sourceTree = "<group>"; };
+		F04F5A5D1ED64578005F23F3 /* ProductsFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsFetcher.swift; sourceTree = "<group>"; };
+		F04F5A5F1ED6458C005F23F3 /* ProductsFetcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsFetcherTests.swift; sourceTree = "<group>"; };
+		F04F5A611ED64C3E005F23F3 /* Stub_ProductsList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_ProductsList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				F002D57B1ED58C610076946F /* Info.plist */,
+				F04F5A4B1ED5E935005F23F3 /* TestsStubData */,
 				F002D5921ED5D5530076946F /* ProductTests.swift */,
 				F04F5A5B1ED640FE005F23F3 /* APIEndpointTests.swift */,
-				F04F5A4B1ED5E935005F23F3 /* TestsStubData */,
+				F04F5A5F1ED6458C005F23F3 /* ProductsFetcherTests.swift */,
 			);
 			path = JLDemoTests;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 		F04F5A4B1ED5E935005F23F3 /* TestsStubData */ = {
 			isa = PBXGroup;
 			children = (
+				F04F5A611ED64C3E005F23F3 /* Stub_ProductsList.json */,
 				F04F5A541ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json */,
 				F04F5A4C1ED5E958005F23F3 /* Stub_OneProduct_Missing_Image.json */,
 				F04F5A4D1ED5E958005F23F3 /* Stub_OneProduct_Missing_Now.json */,
@@ -177,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				F04F5A591ED63FE5005F23F3 /* APIEndpoint.swift */,
+				F04F5A5D1ED64578005F23F3 /* ProductsFetcher.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 				F04F5A511ED5E958005F23F3 /* Stub_OneProduct_Missing_Now.json in Resources */,
 				F002D59A1ED5E1E30076946F /* Stub_OneProduct_Missing_ProductId.json in Resources */,
 				F04F5A531ED5E958005F23F3 /* Stub_OneProduct_Missing_Title.json in Resources */,
+				F04F5A621ED64C3E005F23F3 /* Stub_ProductsList.json in Resources */,
 				F04F5A521ED5E958005F23F3 /* Stub_OneProduct_Missing_Price.json in Resources */,
 				F002D5981ED5DB420076946F /* Stub_OneProduct.json in Resources */,
 				F04F5A551ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json in Resources */,
@@ -330,6 +340,7 @@
 				F002D5651ED58C600076946F /* AppDelegate.swift in Sources */,
 				F002D5961ED5D62A0076946F /* Product.swift in Sources */,
 				F04F5A5A1ED63FE5005F23F3 /* APIEndpoint.swift in Sources */,
+				F04F5A5E1ED64578005F23F3 /* ProductsFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04F5A601ED6458C005F23F3 /* ProductsFetcherTests.swift in Sources */,
 				F002D5931ED5D5530076946F /* ProductTests.swift in Sources */,
 				F04F5A5C1ED640FE005F23F3 /* APIEndpointTests.swift in Sources */,
 			);
