@@ -13,9 +13,15 @@
 		F002D56C1ED58C600076946F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F002D56B1ED58C600076946F /* Assets.xcassets */; };
 		F002D56F1ED58C600076946F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F002D56D1ED58C600076946F /* LaunchScreen.storyboard */; };
 		F002D5851ED58C610076946F /* JLDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5841ED58C610076946F /* JLDemoUITests.swift */; };
-		F002D5931ED5D5530076946F /* ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5921ED5D5530076946F /* ProductsTests.swift */; };
+		F002D5931ED5D5530076946F /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5921ED5D5530076946F /* ProductTests.swift */; };
 		F002D5961ED5D62A0076946F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002D5951ED5D62A0076946F /* Product.swift */; };
 		F002D5981ED5DB420076946F /* Stub_OneProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = F002D5971ED5DB420076946F /* Stub_OneProduct.json */; };
+		F002D59A1ED5E1E30076946F /* Stub_OneProduct_Missing_ProductId.json in Resources */ = {isa = PBXBuildFile; fileRef = F002D5991ED5E1E30076946F /* Stub_OneProduct_Missing_ProductId.json */; };
+		F04F5A501ED5E958005F23F3 /* Stub_OneProduct_Missing_Image.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F5A4C1ED5E958005F23F3 /* Stub_OneProduct_Missing_Image.json */; };
+		F04F5A511ED5E958005F23F3 /* Stub_OneProduct_Missing_Now.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F5A4D1ED5E958005F23F3 /* Stub_OneProduct_Missing_Now.json */; };
+		F04F5A521ED5E958005F23F3 /* Stub_OneProduct_Missing_Price.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F5A4E1ED5E958005F23F3 /* Stub_OneProduct_Missing_Price.json */; };
+		F04F5A531ED5E958005F23F3 /* Stub_OneProduct_Missing_Title.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F5A4F1ED5E958005F23F3 /* Stub_OneProduct_Missing_Title.json */; };
+		F04F5A551ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F5A541ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +54,15 @@
 		F002D5801ED58C610076946F /* JLDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F002D5841ED58C610076946F /* JLDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDemoUITests.swift; sourceTree = "<group>"; };
 		F002D5861ED58C610076946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F002D5921ED5D5530076946F /* ProductsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTests.swift; sourceTree = "<group>"; };
+		F002D5921ED5D5530076946F /* ProductTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		F002D5951ED5D62A0076946F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		F002D5971ED5DB420076946F /* Stub_OneProduct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_OneProduct.json; sourceTree = "<group>"; };
+		F002D5991ED5E1E30076946F /* Stub_OneProduct_Missing_ProductId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_OneProduct_Missing_ProductId.json; sourceTree = "<group>"; };
+		F04F5A4C1ED5E958005F23F3 /* Stub_OneProduct_Missing_Image.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_OneProduct_Missing_Image.json; sourceTree = "<group>"; };
+		F04F5A4D1ED5E958005F23F3 /* Stub_OneProduct_Missing_Now.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_OneProduct_Missing_Now.json; sourceTree = "<group>"; };
+		F04F5A4E1ED5E958005F23F3 /* Stub_OneProduct_Missing_Price.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_OneProduct_Missing_Price.json; sourceTree = "<group>"; };
+		F04F5A4F1ED5E958005F23F3 /* Stub_OneProduct_Missing_Title.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_OneProduct_Missing_Title.json; sourceTree = "<group>"; };
+		F04F5A541ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stub_OneProduct_Invalid_Now.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				F002D57B1ED58C610076946F /* Info.plist */,
-				F002D5921ED5D5530076946F /* ProductsTests.swift */,
-				F002D5971ED5DB420076946F /* Stub_OneProduct.json */,
+				F002D5921ED5D5530076946F /* ProductTests.swift */,
+				F04F5A4B1ED5E935005F23F3 /* TestsStubData */,
 			);
 			path = JLDemoTests;
 			sourceTree = "<group>";
@@ -137,6 +149,20 @@
 				F002D5951ED5D62A0076946F /* Product.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F04F5A4B1ED5E935005F23F3 /* TestsStubData */ = {
+			isa = PBXGroup;
+			children = (
+				F04F5A541ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json */,
+				F04F5A4C1ED5E958005F23F3 /* Stub_OneProduct_Missing_Image.json */,
+				F04F5A4D1ED5E958005F23F3 /* Stub_OneProduct_Missing_Now.json */,
+				F04F5A4E1ED5E958005F23F3 /* Stub_OneProduct_Missing_Price.json */,
+				F04F5A4F1ED5E958005F23F3 /* Stub_OneProduct_Missing_Title.json */,
+				F002D5991ED5E1E30076946F /* Stub_OneProduct_Missing_ProductId.json */,
+				F002D5971ED5DB420076946F /* Stub_OneProduct.json */,
+			);
+			name = TestsStubData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +286,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04F5A511ED5E958005F23F3 /* Stub_OneProduct_Missing_Now.json in Resources */,
+				F002D59A1ED5E1E30076946F /* Stub_OneProduct_Missing_ProductId.json in Resources */,
+				F04F5A531ED5E958005F23F3 /* Stub_OneProduct_Missing_Title.json in Resources */,
+				F04F5A521ED5E958005F23F3 /* Stub_OneProduct_Missing_Price.json in Resources */,
 				F002D5981ED5DB420076946F /* Stub_OneProduct.json in Resources */,
+				F04F5A551ED5ECFF005F23F3 /* Stub_OneProduct_Invalid_Now.json in Resources */,
+				F04F5A501ED5E958005F23F3 /* Stub_OneProduct_Missing_Image.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F002D5931ED5D5530076946F /* ProductsTests.swift in Sources */,
+				F002D5931ED5D5530076946F /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
