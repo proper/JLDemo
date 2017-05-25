@@ -79,10 +79,14 @@ class ProductCellTests: XCTestCase {
         
         returnedCell?.productImageView.image = UIImage()
         XCTAssertNotNil(returnedCell?.productImageView.image)
+        
+        returnedCell?.imageDataTask = MockDataTask()
+        XCTAssertNotNil(returnedCell?.imageDataTask)
 
         returnedCell?.prepareForReuse()
         XCTAssertNil(returnedCell?.productInfoLabel.text)
         XCTAssertNil(returnedCell?.productImageView.image)
+        XCTAssertNil(returnedCell?.imageDataTask)
     }
     
     // MARK: - MOCK
@@ -108,6 +112,12 @@ class ProductCellTests: XCTestCase {
     
     class MockProductCell: ProductCell {
         
+    }
+    
+    class MockDataTask: URLSessionDataTask {
+        
+        override func cancel() {
+        }
     }
     
 }

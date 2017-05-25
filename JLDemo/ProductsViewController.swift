@@ -37,8 +37,7 @@ class ProductsViewController: UIViewController {
                 }
                 return
             }
-            
-            
+
             DispatchQueue.main.async {
                 self.updateUI(with: products)
             }

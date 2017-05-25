@@ -29,6 +29,7 @@ class ProductTests: XCTestCase {
         XCTAssertEqual(product.price, "1120")
         XCTAssertEqual(product.title, "A Dishwasher")
         XCTAssertEqual(product.image, "//sample.com/image.jpg")
+        XCTAssertEqual(product.imageURL!, URL(string:"https://sample.com/image.jpg"))
     }
     
     
@@ -47,6 +48,7 @@ class ProductTests: XCTestCase {
                 XCTAssertEqual(product!.price, "329.00")
                 XCTAssertEqual(product!.title, "Bosch SMS53M02GB Freestanding Dishwasher, White")
                 XCTAssertEqual(product!.image, "//johnlewis.scene7.com/is/image/JohnLewis/234326367?")
+                XCTAssertEqual(product!.imageURL!, URL(string:"https://johnlewis.scene7.com/is/image/JohnLewis/234326367?"))
             } else {
                 XCTFail("Failed to create product")
             }

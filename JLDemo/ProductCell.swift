@@ -13,8 +13,15 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productInfoLabel: UILabel!
     
+    var imageDataTask: URLSessionDataTask?
+    
     override func prepareForReuse() {
         super.prepareForReuse()
+        
+        if imageDataTask != nil {
+            imageDataTask?.cancel()
+            imageDataTask = nil
+        }
         
         productImageView.image = nil
         productInfoLabel.attributedText = nil
@@ -22,6 +29,11 @@ class ProductCell: UICollectionViewCell {
     
     func prepare(for product: Product) {
         productInfoLabel.attributedText = attributedInfoText(for: product)
+        if let url = product.imageURL {
+            imageDataTask = productImageView.setImage(for: url, on: URLSession.shared,completionHandler: {(_) in
+                self.imageDataTask = nil
+            })
+        }
     }
     
     func attributedInfoText(for product: Product) -> NSAttributedString {
