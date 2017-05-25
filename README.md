@@ -14,15 +14,15 @@ Git-flow workflow was used to develop the app.
 - The app displays the title, image, price and title of the dishwasher.
  
 ### How to open the project
-Go to the JLDemo folder.
-Find a file named 'JLDemo.xcodeproj', open it.
-Select an iPad simulator with version 10.0.
-Press 'cmd+U' to test or 'cmd+R' to run the app on the iPad simulator.
+- Go to the JLDemo folder.
+- Find a file named `JLDemo.xcodeproj`, open it.
+- Select an iPad simulator with version 10.0.
+- Press `cmd+U` to test or `cmd+R` to run the app on the iPad simulator.
 
 ### The plan for developing the demo app
 
-~~ - A model will be created first. ~~
-~~ - I will add the network downloading logic after. ~~
+<del> - A model will be created first. </del>
+<del> - I will add the network downloading logic after. </del>
 - I will use UICollectionView to display the grid. I will possibly use a 3rd party image downloader, because it will be easier and not comprise the purpose of the demo.
 
 ### TDD approach applied
