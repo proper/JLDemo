@@ -111,6 +111,27 @@ class ProductsFetcherTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
+    func testFetchProductsNetworkError() {
+        let expectation = self.expectation(description: "Failed to get products")
+        
+        let dataTask = MockDataTask()
+        dataTask.stubbedError = NSError(domain: "NetworkError", code: 1002, userInfo: nil)
+        
+        let urlSession = MockURLSession(dataTask: dataTask)
+        
+        let returnedTask = ProductsFetcher.getProducts(matching: "Dishwasher",
+                                                       with: 20,
+                                                       on: urlSession, completion: { (products, error) in
+                                                        XCTAssertNotNil(error)
+                                                        XCTAssert(products.count == 0)
+                                                        expectation.fulfill()
+        })
+        
+        XCTAssertNotNil(returnedTask)
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
     // MARK: - Mock
     
     class MockURLSession: URLSession {

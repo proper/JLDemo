@@ -1,32 +1,38 @@
-master branch [![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=master)](https://travis-ci.org/proper/JLDemo) [![codecov](https://codecov.io/gh/proper/JLDemo/branch/master/graph/badge.svg)](https://codecov.io/gh/proper/JLDemo) develop branch [![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=develop)](https://travis-ci.org/proper/JLDemo) [![codecov](https://codecov.io/gh/proper/JLDemo/branch/develop/graph/badge.svg)](https://codecov.io/gh/proper/JLDemo)
-
+master branch [![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=master)](https://travis-ci.org/proper/JLDemo) develop branch [![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=develop)](https://travis-ci.org/proper/JLDemo)
 
 # JLDemo
 
 A demo project based on Swift 3 & Xcode 8, for iPad only.
 
-Git-flow workflow was used to develop the app.
+I used Git-flow workflow and TDD approach to develop the app. This project is to demo the quality of my code. For the sake of showing my code only, no 3rd party library was used. Even though it will make the development quicker and easier.
 
-### Goals of the demo project
-- The app should work on an iPad, in landscape and portrait mode.
-- The app allows customers to see the range of dishwashers available.
-- The app displays the first 20 results returned by the API.
-- The app displays the title, image, price and title of the dishwasher.
+### Features of the demo project
+- Works on iPad only, in landscape and portrait mode.
+- Allows customers to see the range of dishwashers available.
+- Displays the first 20 results returned by the API.
+- Displays the image, title and price of the dishwasher.
 
-### How to open the project
+### How to open and run the project
 - Go to the JLDemo folder.
 - Find a file named `JLDemo.xcodeproj`, open it.
-- Select an iPad simulator with version 10.0.
-- Press `cmd+U` to test or `cmd+R` to run the app on the iPad simulator.
+- Select an iPad simulator with version 10.0+.
+- Press `cmd+U` to test. You can find the test results and code coverage in `Report navigator` panel from Xcode.
+- Press `cmd+R` to run the app on the iPad simulator.
 
-### The plan for developing the demo app
+### TDD approach and code coverage
 
-<del> - A model will be created first. </del>
-<del> - I will add the network downloading logic after. </del>
-- I will use UICollectionView to display the grid. I will possibly use a 3rd party image downloader, because it will be easier and not comprise the purpose of the demo.
+I mainly created the Product data type following the TDD approach. You will notice all of the commits around this. I wrote a test case for creating a Product first. Then some more complex logics were created along with writing more test cases. The Product type was refactored several times to reflect the changes in test cases.
 
-### TDD approach applied
+Other components were coded in similar way. However I did not commit every single change to reflect it.
 
-I created the Product data type using the TDD approach. You will notice all of the commits around this.
+Apart from the UI view controller code, the app has 100% code coverage.
 
-I wrote a test case for creating a Product first. Then some more complex logics were created along with writing more test cases. The Product type was refactored several times to reflect the changes in test cases.
+### Notes
+- I did not spend much time on the UI interaction bit. It can be handled better by adding loading screen, customised error messages etc.
+- I only add in the code when absolutely necessary. The project's structure is very simple and should be easy to understand.
+
+### Assumptions
+- The app only gets the data from the server once after being launched.
+- No data persistence needed.
+- No caching needed.
+- API token was saved into the source code in this public repository, which could be a security problem.

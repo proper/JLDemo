@@ -19,6 +19,10 @@ struct Product {
     let title: String
     let image: String
     
+    var imageURL: URL? {
+       return URL(string: "https:" + self.image)
+    }
+    
     init(productId: String, price: String, title: String, image: String) {
         self.productId = productId
         self.price = price

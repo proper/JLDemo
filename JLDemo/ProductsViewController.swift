@@ -9,17 +9,62 @@
 import UIKit
 
 class ProductsViewController: UIViewController {
-
+    
+    @IBOutlet weak var productsGridView: UICollectionView!
+    
+    let productsGridDataSource = ProductsGridDataSource()
+    var dataTask: URLSessionDataTask?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        productsGridView.dataSource = productsGridDataSource
+        
+        fetchProducts()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func fetchProducts() {
+        // Cancel the previous fetch
+        if dataTask != nil {
+            dataTask?.cancel()
+            dataTask = nil
+        }
+        
+        dataTask = ProductsFetcher.getProducts(matching: "dishwasher", with: 20, on: URLSession.shared) { (products, error) in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    self.showErrorMessage(for: error!)
+                }
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.updateUI(with: products)
+            }
+        }
     }
-
-
+    
+    private func navTitle(for products: [Product]) -> String {
+        let titleLeft = NSLocalizedString("Dishwashers (", comment: "Dishwashers (")
+        let titleRight = NSLocalizedString(")", comment: ")")
+        
+        
+        return titleLeft + "\(products.count)" + titleRight
+    }
+    
+    private func updateUI(with products: [Product]) {
+        self.navigationItem.title = navTitle(for: products)
+        
+        productsGridDataSource.products = products
+        productsGridView.reloadData()
+    }
+    
+    private func showErrorMessage(for error: Error) {
+        let ac = UIAlertController(title: NSLocalizedString("Sorry", comment: "Sorry"),
+                                   message: NSLocalizedString("Failed to get products list. Please try again later.",
+                                                              comment: "Failed to get products list. Please try again later."),
+                                   preferredStyle: .alert)
+        self.present(ac, animated: true, completion: nil)
+    }
 }
 

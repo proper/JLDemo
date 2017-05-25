@@ -20,6 +20,11 @@ struct ProductsFetcher {
         
         
         let dataTask = session.dataTask(with: queryURL) { (dataReceived, _, error) in
+            guard error == nil else {
+                completion([], error)
+                return
+            }
+            
             var products: [Product] = []
             
             if let data = dataReceived,
