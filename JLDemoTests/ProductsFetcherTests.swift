@@ -53,6 +53,64 @@ class ProductsFetcherTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
+    func testFetchProductsEmptyQueryURL() {
+        let bundle = Bundle(for: ProductTests.self)
+        guard let filePath = bundle.path(forResource: "Stub_ProductsList", ofType: "json") else {
+            XCTFail("Failed to read file Stub_ProductsList.json")
+            return
+        }
+        
+        if let jsonData = try? Data(contentsOf: URL(fileURLWithPath: filePath)) {
+            let dataTask = MockDataTask()
+            dataTask.stubbedData = jsonData
+            
+            let urlSession = MockURLSession(dataTask: dataTask)
+            
+            let returnedTask = ProductsFetcher.getProducts(matching: "  ",
+                                                           with: 20,
+                                                           on: urlSession, completion: { (products, error) in
+            })
+            
+            XCTAssertNil(returnedTask)
+            
+        } else {
+            XCTFail("Failed to read file content from Stub_ProductsList")
+        }
+    }
+    
+    
+    func testFetchProductsInvalidProduct() {
+        let expectation = self.expectation(description: "Failed to get products")
+        
+        let bundle = Bundle(for: ProductTests.self)
+        guard let filePath = bundle.path(forResource: "Stub_ProductsList_InvalidProduct", ofType: "json") else {
+            XCTFail("Failed to read file Stub_ProductsList_InvalidProduct.json")
+            return
+        }
+        
+        if let jsonData = try? Data(contentsOf: URL(fileURLWithPath: filePath)) {
+            let dataTask = MockDataTask()
+            dataTask.stubbedData = jsonData
+            
+            let urlSession = MockURLSession(dataTask: dataTask)
+            
+            let returnedTask = ProductsFetcher.getProducts(matching: "Dishwasher",
+                                                           with: 20,
+                                                           on: urlSession, completion: { (products, error) in
+                                                            XCTAssertNotNil(error)
+                                                            XCTAssert(products.count == 0)
+                                                            expectation.fulfill()
+            })
+            
+            XCTAssertNotNil(returnedTask)
+            
+        } else {
+            XCTFail("Failed to read file content from Stub_ProductsList_InvalidProduct")
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
     // MARK: - Mock
     
     class MockURLSession: URLSession {

@@ -34,6 +34,7 @@ struct ProductsFetcher {
                         }
                     } catch let errorCatched {
                         completion([], errorCatched)
+                        return
                     }
                     
                 }
