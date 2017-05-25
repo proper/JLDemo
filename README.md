@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=master)](https://travis-ci.org/proper/JLDemo) [![codecov](https://codecov.io/gh/proper/JLDemo/branch/master/graph/badge.svg)](https://codecov.io/gh/proper/JLDemo)
+master branch [![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=master)](https://travis-ci.org/proper/JLDemo) [![codecov](https://codecov.io/gh/proper/JLDemo/branch/master/graph/badge.svg)](https://codecov.io/gh/proper/JLDemo) develop branch [![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=develop)](https://travis-ci.org/proper/JLDemo) [![codecov](https://codecov.io/gh/proper/JLDemo/branch/develop/graph/badge.svg)](https://codecov.io/gh/proper/JLDemo)
 
 
 # JLDemo
@@ -12,7 +12,7 @@ Git-flow workflow was used to develop the app.
 - The app allows customers to see the range of dishwashers available.
 - The app displays the first 20 results returned by the API.
 - The app displays the title, image, price and title of the dishwasher.
- 
+
 ### How to open the project
 - Go to the JLDemo folder.
 - Find a file named `JLDemo.xcodeproj`, open it.
