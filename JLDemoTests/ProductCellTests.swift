@@ -25,8 +25,10 @@ class ProductCellTests: XCTestCase {
         let cell = MockProductCell()
         let imageView = UIImageView(frame: .zero)
         let titleLabel = UILabel(frame: .zero)
+        let priceLabel = UILabel(frame: .zero)
         cell.productImageView = imageView
-        cell.productInfoLabel = titleLabel
+        cell.productTitleLabel = titleLabel
+        cell.productPriceLabel = priceLabel
         
         let collectionView = MockUICollectionView(cell: cell)
         
@@ -39,23 +41,18 @@ class ProductCellTests: XCTestCase {
         let returnedCell = dataSource.collectionView(collectionView, cellForItemAt: indexPath) as? MockProductCell
         
         XCTAssertEqual(cell, returnedCell)
-        
-        let combination = NSMutableAttributedString()
-        let attributedTitleString = NSMutableAttributedString(string: "1st\n",
-                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans", size: 16.0)!])
-        combination.append(attributedTitleString)
-        let attributedPriceString = NSMutableAttributedString(string: "£1.00",
-                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans-Bold", size: 15.0)!])
-        combination.append(attributedPriceString)        
-        XCTAssertEqual(returnedCell?.productInfoLabel.attributedText, combination)
+        XCTAssertEqual(returnedCell?.productTitleLabel.text, "1st")
+        XCTAssertEqual(returnedCell?.productPriceLabel.text, "£1.00")
     }
     
     func testProductCellReuse() {
         let cell = MockProductCell()
         let imageView = UIImageView(frame: .zero)
         let titleLabel = UILabel(frame: .zero)
+        let priceLabel = UILabel(frame: .zero)
         cell.productImageView = imageView
-        cell.productInfoLabel = titleLabel
+        cell.productTitleLabel = titleLabel
+        cell.productPriceLabel = priceLabel
         
         let collectionView = MockUICollectionView(cell: cell)
         
@@ -67,15 +64,8 @@ class ProductCellTests: XCTestCase {
         let indexPath = IndexPath(item: 0, section: 0)
         let returnedCell = dataSource.collectionView(collectionView, cellForItemAt: indexPath) as? MockProductCell
         XCTAssertEqual(cell, returnedCell)
-
-        let combination = NSMutableAttributedString()
-        let attributedTitleString = NSMutableAttributedString(string: "1st\n",
-                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans", size: 16.0)!])
-        combination.append(attributedTitleString)
-        let attributedPriceString = NSMutableAttributedString(string: "£1.00",
-                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans-Bold", size: 15.0)!])
-        combination.append(attributedPriceString)
-        XCTAssertEqual(returnedCell?.productInfoLabel.attributedText, combination)
+        XCTAssertEqual(returnedCell?.productTitleLabel.text, "1st")
+        XCTAssertEqual(returnedCell?.productPriceLabel.text, "£1.00")
         
         returnedCell?.productImageView.image = UIImage()
         XCTAssertNotNil(returnedCell?.productImageView.image)
@@ -84,7 +74,8 @@ class ProductCellTests: XCTestCase {
         XCTAssertNotNil(returnedCell?.imageDataTask)
 
         returnedCell?.prepareForReuse()
-        XCTAssertNil(returnedCell?.productInfoLabel.text)
+        XCTAssertNil(returnedCell?.productTitleLabel.text)
+        XCTAssertNil(returnedCell?.productPriceLabel.text)
         XCTAssertNil(returnedCell?.productImageView.image)
         XCTAssertNil(returnedCell?.imageDataTask)
     }

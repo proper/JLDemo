@@ -23,7 +23,7 @@ class ProductsViewController: UIViewController {
         fetchProducts()
     }
 
-    func fetchProducts() {
+    private func fetchProducts() {
         // Cancel the previous fetch
         if dataTask != nil {
             dataTask?.cancel()
@@ -44,7 +44,7 @@ class ProductsViewController: UIViewController {
         }
     }
     
-    func navTitle(for products: [Product]) -> String {
+    private func navTitle(for products: [Product]) -> String {
         let titleLeft = NSLocalizedString("Dishwashers (", comment: "Dishwashers (")
         let titleRight = NSLocalizedString(")", comment: ")")
         
@@ -52,14 +52,14 @@ class ProductsViewController: UIViewController {
         return titleLeft + "\(products.count)" + titleRight
     }
     
-    func updateUI(with products: [Product]) {
+    private func updateUI(with products: [Product]) {
         self.navigationItem.title = navTitle(for: products)
         
         productsGridDataSource.products = products
         productsGridView.reloadData()
     }
     
-    func showErrorMessage(for error: Error) {
+    private func showErrorMessage(for error: Error) {
         let ac = UIAlertController(title: NSLocalizedString("Sorry", comment: "Sorry"),
                                    message: NSLocalizedString("Failed to get products list. Please try again later.",
                                                               comment: "Failed to get products list. Please try again later."),

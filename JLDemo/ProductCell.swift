@@ -11,7 +11,8 @@ import UIKit
 class ProductCell: UICollectionViewCell {
     
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var productInfoLabel: UILabel!
+    @IBOutlet weak var productTitleLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
     
     var imageDataTask: URLSessionDataTask?
     
@@ -24,29 +25,19 @@ class ProductCell: UICollectionViewCell {
         }
         
         productImageView.image = nil
-        productInfoLabel.attributedText = nil
+        productTitleLabel.text = nil
+        productPriceLabel.text = nil
     }
     
     func prepare(for product: Product) {
-        productInfoLabel.attributedText = attributedInfoText(for: product)
+        productTitleLabel.text = product.title
+        productPriceLabel.text = "£" + product.price
+        
         if let url = product.imageURL {
             imageDataTask = productImageView.setImage(for: url, on: URLSession.shared,completionHandler: {(_) in
                 self.imageDataTask = nil
             })
         }
     }
-    
-    func attributedInfoText(for product: Product) -> NSAttributedString {
-        let combination = NSMutableAttributedString()
 
-        let attributedTitleString = NSMutableAttributedString(string: product.title + "\n",
-                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans", size: 16.0)!])
-        combination.append(attributedTitleString)
-        
-        let attributedPriceString = NSMutableAttributedString(string: "£" + product.price,
-                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans-Bold", size: 15.0)!])
-        combination.append(attributedPriceString)
-        
-        return combination
-    }
 }

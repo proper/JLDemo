@@ -65,27 +65,39 @@
                                                         <constraint firstAttribute="width" constant="215" id="xQY-cS-76m"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNK-Jh-WK4">
+                                                    <rect key="frame" x="20" y="228" width="215" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                                    <color key="textColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpu-g2-Xkc">
-                                                    <rect key="frame" x="20" y="230" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="20" y="247.5" width="41.5" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                                    <color key="textColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="KNK-Jh-WK4" firstAttribute="leading" secondItem="ltm-Fk-gSE" secondAttribute="leadingMargin" constant="12" id="1WM-G4-kQf"/>
                                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Vpu-g2-Xkc" secondAttribute="bottom" constant="12" id="38C-fX-mmN"/>
+                                            <constraint firstItem="Vpu-g2-Xkc" firstAttribute="leading" secondItem="KNK-Jh-WK4" secondAttribute="leading" id="6NL-Ht-S13"/>
                                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Vpu-g2-Xkc" secondAttribute="trailing" constant="12" id="73z-4i-c4u"/>
+                                            <constraint firstItem="KNK-Jh-WK4" firstAttribute="top" secondItem="933-jF-6mz" secondAttribute="bottom" constant="8" id="GlT-yc-fmN"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="KNK-Jh-WK4" secondAttribute="trailing" constant="12" id="IvR-Is-v3b"/>
+                                            <constraint firstItem="Vpu-g2-Xkc" firstAttribute="top" secondItem="KNK-Jh-WK4" secondAttribute="bottom" constant="1" id="RBg-nJ-D3d"/>
                                             <constraint firstItem="933-jF-6mz" firstAttribute="top" secondItem="ltm-Fk-gSE" secondAttribute="topMargin" constant="12" id="YDH-ad-xaQ"/>
+                                            <constraint firstItem="KNK-Jh-WK4" firstAttribute="leading" secondItem="933-jF-6mz" secondAttribute="leading" id="dhD-dP-4D8"/>
                                             <constraint firstItem="933-jF-6mz" firstAttribute="leading" secondItem="ltm-Fk-gSE" secondAttribute="leadingMargin" constant="12" id="fgp-7t-TPL"/>
                                             <constraint firstItem="Vpu-g2-Xkc" firstAttribute="leading" secondItem="933-jF-6mz" secondAttribute="leading" id="r6c-J8-r1f"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="933-jF-6mz" secondAttribute="trailing" constant="12" id="rMF-zo-h3p"/>
-                                            <constraint firstItem="Vpu-g2-Xkc" firstAttribute="top" secondItem="933-jF-6mz" secondAttribute="bottom" constant="10" id="vIN-46-bE5"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="productImageView" destination="933-jF-6mz" id="CRE-r7-Jj7"/>
-                                            <outlet property="productInfoLabel" destination="Vpu-g2-Xkc" id="E0e-Bw-adx"/>
+                                            <outlet property="productPriceLabel" destination="Vpu-g2-Xkc" id="RBy-SO-bh9"/>
+                                            <outlet property="productTitleLabel" destination="KNK-Jh-WK4" id="Uva-2v-Xqb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
