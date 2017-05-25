@@ -66,13 +66,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpu-g2-Xkc">
-                                                    <rect key="frame" x="20" y="225" width="50" height="107"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ACj-Al-o15"/>
-                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="107" id="NX9-YJ-MJb"/>
-                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="215" id="OS4-mM-3cb"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="xrw-hL-IgL"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="230" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -81,12 +75,13 @@
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Vpu-g2-Xkc" secondAttribute="bottom" constant="12" id="38C-fX-mmN"/>
+                                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Vpu-g2-Xkc" secondAttribute="trailing" constant="12" id="73z-4i-c4u"/>
                                             <constraint firstItem="933-jF-6mz" firstAttribute="top" secondItem="ltm-Fk-gSE" secondAttribute="topMargin" constant="12" id="YDH-ad-xaQ"/>
-                                            <constraint firstItem="Vpu-g2-Xkc" firstAttribute="leading" secondItem="933-jF-6mz" secondAttribute="leading" id="b7N-OC-dbs"/>
                                             <constraint firstItem="933-jF-6mz" firstAttribute="leading" secondItem="ltm-Fk-gSE" secondAttribute="leadingMargin" constant="12" id="fgp-7t-TPL"/>
+                                            <constraint firstItem="Vpu-g2-Xkc" firstAttribute="leading" secondItem="933-jF-6mz" secondAttribute="leading" id="r6c-J8-r1f"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="933-jF-6mz" secondAttribute="trailing" constant="12" id="rMF-zo-h3p"/>
-                                            <constraint firstItem="Vpu-g2-Xkc" firstAttribute="top" secondItem="933-jF-6mz" secondAttribute="bottom" constant="5" id="sRV-FA-tiy"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="Vpu-g2-Xkc" secondAttribute="bottom" constant="12" id="vvh-eO-FDI"/>
+                                            <constraint firstItem="Vpu-g2-Xkc" firstAttribute="top" secondItem="933-jF-6mz" secondAttribute="bottom" constant="10" id="vIN-46-bE5"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="productImageView" destination="933-jF-6mz" id="CRE-r7-Jj7"/>
