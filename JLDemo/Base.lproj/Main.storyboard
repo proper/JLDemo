@@ -65,11 +65,11 @@
                                                         <constraint firstAttribute="width" constant="215" id="xQY-cS-76m"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpu-g2-Xkc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpu-g2-Xkc">
                                                     <rect key="frame" x="19.5" y="225" width="215" height="107"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="215" id="ACj-Al-o15"/>
-                                                        <constraint firstAttribute="height" constant="107" id="xrw-hL-IgL"/>
+                                                        <constraint firstAttribute="width" priority="750" constant="215" id="ACj-Al-o15"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="107" id="xrw-hL-IgL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

@@ -39,7 +39,15 @@ class ProductCellTests: XCTestCase {
         let returnedCell = dataSource.collectionView(collectionView, cellForItemAt: indexPath) as? MockProductCell
         
         XCTAssertEqual(cell, returnedCell)
-        XCTAssertEqual(returnedCell?.productInfoLabel.text, "1st\n£1.00")
+        
+        let combination = NSMutableAttributedString()
+        let attributedTitleString = NSMutableAttributedString(string: "1st\n",
+                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans", size: 16.0)!])
+        combination.append(attributedTitleString)
+        let attributedPriceString = NSMutableAttributedString(string: "£1.00",
+                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans-Bold", size: 15.0)!])
+        combination.append(attributedPriceString)        
+        XCTAssertEqual(returnedCell?.productInfoLabel.attributedText, combination)
     }
     
     func testProductCellReuse() {
@@ -59,7 +67,16 @@ class ProductCellTests: XCTestCase {
         let indexPath = IndexPath(item: 0, section: 0)
         let returnedCell = dataSource.collectionView(collectionView, cellForItemAt: indexPath) as? MockProductCell
         XCTAssertEqual(cell, returnedCell)
-        XCTAssertEqual(returnedCell?.productInfoLabel.text, "1st\n£1.00")
+
+        let combination = NSMutableAttributedString()
+        let attributedTitleString = NSMutableAttributedString(string: "1st\n",
+                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans", size: 16.0)!])
+        combination.append(attributedTitleString)
+        let attributedPriceString = NSMutableAttributedString(string: "£1.00",
+                                                              attributes:[NSFontAttributeName: UIFont(name:"GillSans-Bold", size: 15.0)!])
+        combination.append(attributedPriceString)
+        XCTAssertEqual(returnedCell?.productInfoLabel.attributedText, combination)
+        
         returnedCell?.productImageView.image = UIImage()
         XCTAssertNotNil(returnedCell?.productImageView.image)
 
