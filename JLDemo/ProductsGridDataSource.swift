@@ -10,13 +10,7 @@ import UIKit
 
 class ProductsGridDataSource: NSObject, UICollectionViewDataSource {
     
-    var products: [Product]?
-    
-    override init() {
-        super.init()
-        
-        products = []
-    }
+    public var products: [Product]?
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
