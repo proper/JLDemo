@@ -10,9 +10,9 @@ I used Git-flow workflow and TDD approach to develop the app. This project is to
 - Works on iPad only, in landscape and portrait mode.
 - Allows customers to see the range of dishwashers available.
 - Displays the first 20 results returned by the API.
-- Displays the title, image, price and title of the dishwasher.
+- Displays the image, title and price of the dishwasher.
 
-### How to open the project
+### How to open and run the project
 - Go to the JLDemo folder.
 - Find a file named `JLDemo.xcodeproj`, open it.
 - Select an iPad simulator with version 10.0+.
@@ -35,4 +35,4 @@ Apart from the UI view controller code, the app has 100% code coverage.
 - The app only gets the data from the server once after being launched.
 - No data persistence needed.
 - No caching needed.
-- API token was saved into the source code in this public repository, which could be a security problem. 
+- API token was saved into the source code in this public repository, which could be a security problem.
