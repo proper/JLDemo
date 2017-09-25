@@ -19,6 +19,7 @@ class ProductsViewController: UIViewController {
         super.viewDidLoad()
         
         productsGridView.dataSource = productsGridDataSource
+        updateProductsGridViewLayout()
         
         fetchProducts()
     }
@@ -53,10 +54,19 @@ class ProductsViewController: UIViewController {
     }
     
     private func updateUI(with products: [Product]) {
-        self.navigationItem.title = navTitle(for: products)
+        navigationItem.title = navTitle(for: products)
         
         productsGridDataSource.products = products
         productsGridView.reloadData()
+    }
+    
+    private func updateProductsGridViewLayout() {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (self.view.bounds.width/3.0 - 1.0), height: 352)
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        
+        productsGridView.setCollectionViewLayout(layout, animated: false)
     }
     
     private func showErrorMessage(for error: Error) {

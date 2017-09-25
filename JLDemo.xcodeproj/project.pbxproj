@@ -180,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				F002D5951ED5D62A0076946F /* Product.swift */,
+				F0B6A9DF1ED6D04900763C19 /* ProductsGridDataSource.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				F002D5661ED58C600076946F /* ProductsViewController.swift */,
-				F0B6A9DF1ED6D04900763C19 /* ProductsGridDataSource.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -299,18 +299,20 @@
 					F002D5601ED58C600076946F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MS9BQ3Y8UY;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					F002D5741ED58C610076946F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MS9BQ3Y8UY;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F002D5601ED58C600076946F;
 					};
 					F002D57F1ED58C610076946F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MS9BQ3Y8UY;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F002D5601ED58C600076946F;
 					};
@@ -550,7 +552,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.lilinyu.demo.JLDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -564,7 +567,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.lilinyu.demo.JLDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -580,7 +584,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ios.lilinyu.demo.JLDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLDemo.app/JLDemo";
 			};
 			name = Debug;
@@ -596,7 +601,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.lilinyu.demo.JLDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLDemo.app/JLDemo";
 			};
 			name = Release;
@@ -610,7 +616,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.lilinyu.demo.JLDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = JLDemo;
 			};
 			name = Debug;
@@ -624,7 +631,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.lilinyu.demo.JLDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = JLDemo;
 			};
 			name = Release;
