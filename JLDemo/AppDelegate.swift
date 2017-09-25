@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "GillSans-Light", size: 22)!,
-                                                            NSForegroundColorAttributeName: UIColor.darkGray]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font : UIFont(name: "GillSans-Light", size: 22)!,
+                                                            NSAttributedStringKey.foregroundColor: UIColor.darkGray]
         
         return true
     }

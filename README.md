@@ -2,7 +2,7 @@ master branch [![Build Status](https://travis-ci.org/proper/JLDemo.svg?branch=ma
 
 # JLDemo
 
-A demo project based on Swift 3 & Xcode 8, for iPad only.
+A demo project based on Swift 4 & Xcode 9, for iPad only.
 
 I used Git-flow workflow and TDD approach to develop the app. This project is to demo the quality of my code. For the sake of showing my code only, no 3rd party library was used. Even though it will make the development quicker and easier.
 
